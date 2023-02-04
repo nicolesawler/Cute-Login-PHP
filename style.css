@@ -1,0 +1,464 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Author     : nicolesawler
+*/
+
+         html,body{
+  background: #e2ffff;
+         margin:0;
+         padding:0;
+         color: black;
+         font-family: 'Port Lligat Sans', sans-serif;
+         text-align: left;
+         line-height: 1.8;
+         font-size: 22px;
+         scroll-behavior: smooth;
+         overflow:hidden;
+         }
+         
+*,
+*:before,
+*:after {
+        box-sizing:border-box;
+        outline:none;
+        
+    }
+
+::-webkit-input-placeholder {
+  color: #e4e4e4;
+}
+
+img.pick{
+    max-width:200px;
+}
+
+#home{
+    width:100%;
+  background-size:contain;
+  min-height:1000px;
+}
+
+.wrapper {
+  margin: 40px auto;
+  width: 1000px;
+  
+}
+
+h1 {
+  margin: 10px;
+  color: #3b5bdb;
+  font-family: "PT Sans Narrow", sans-serif;
+}
+
+.grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.grid {
+  height: 200px;
+  background-color: #fff;
+  border: 2px solid #7f4e94;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 13px;
+  position: relative;-webkit-box-shadow: 0px 2px 81px -13px rgba(255,239,176,1);
+-moz-box-shadow: 0px 2px 81px -13px rgba(255,239,176,1);
+box-shadow: 0px 2px 81px -13px rgba(255,239,176,1);
+}
+.grid:hover .grid-overlay {
+  transform: translate(0, 0);
+  opacity: 1;
+  visibility: visible;
+}
+.grid:hover .grid-overlay .overlay-header {
+  transform: translate(0, 0);
+  opacity: 1;
+  visibility: visible;
+}
+.grid:hover .grid-overlay .overlay-header:before {
+  transform: translate(0, 0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.grid-header {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 30px;
+}
+.grid-header:hover {
+  cursor: pointer;
+}
+.grid-header .icon {
+  color: #333;
+  font-size: 50px;
+}
+.grid-header .label {
+  color: #5b3a1b;
+  margin-top: 10px;
+  font-weight:900;
+  text-shadow: 0px 0px 10px #E8E2BA;
+}
+
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #4b3097;/*7f4e94*/
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  transform: translate(-10%, 0);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out, transform 0.7s ease-in-out;
+}
+.go-1{background-color: #4b3097;}
+.go-2{background-color: #7f4e94;}
+
+.overlay-content-wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  color: #dbbb3b;
+}
+.overlay-content-wrapper .overlay-header {
+  font-size: 25px;
+  margin-bottom: 25px;
+  position: relative;
+  transform: translatex(-70px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out 0.4s, transform 0.7s ease-in-out 0.4s;
+}
+.overlay-content-wrapper .overlay-header:before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  width: 40px;
+  height: 3px;
+  background-color: #dbbb3b;
+  transform: translatey(20px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out 0.8s, transform 0.2s ease-in-out 0.7s;
+}
+
+.user-grid {
+  border: 0;
+}
+.user-grid .label {
+  color: #222;
+  font-size: 22px;
+}
+
+.overlay-label {
+  font-size: 14px;
+  line-height: 1.3;
+  word-spacing: 2px;
+}
+
+.ajduke {
+  text-align: center;
+  font-weight: 600;
+  margin-top: 30px;
+}
+.ajduke .fa-heart {
+  color: tomato;
+  padding: 0 5px;
+}
+.ajduke a {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+}
+.ajduke a:hover, .ajduke a:visited, .ajduke a.active {
+  color: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .green{color:yellowgreen;}
+    .pink{color:#ff549a;}
+    .purple{color:#be5cd2}
+    .blue{color:#04c2ed;}
+    .copyright{color:yellowgreen;font-size:30px;line-height:15px;vertical-align: text-bottom;}
+    
+    
+    
+    .form{
+        width:1200px;
+        position:fixed;
+        top:75px;
+        left:50%;
+        background:white;
+        margin:10px auto;
+/*        border-radius:30px;*/
+        transform:translate(-50%,0);
+        border:3px solid #72d0f4;/* #72d0f4 */
+        clear:both;
+-webkit-box-shadow: 2px 2px 146px -13px rgba(117,215,230,1);
+-moz-box-shadow: 2px 2px 146px -13px rgba(117,215,230,1);
+box-shadow: 2px 2px 146px -13px rgba(117,215,230,1);
+    }
+    .form .box{
+        max-width:50%;
+        margin:0;
+        padding:25px;
+        display:inline-block;
+        vertical-align: text-top;
+        float:left;
+        
+    }
+    
+    .form .box img{
+        max-width:120%;
+        margin:0;
+        padding:0;
+    }
+    
+    .form .login form input{
+        width:100%;
+        background:white!important;
+        padding:15px;
+        font-size:15px;
+        margin:5px 0;
+        border:1px solid #eee;
+    }
+    .form .login h2{
+        color:#67605e;
+    }
+    .form .login{
+        padding-top:80px;
+        margin-left:70px;
+        max-width:40%;
+    }
+    .form .login [type=submit]{
+        background:#eddef9;
+        border:0;
+        padding:10px 25px;
+        color:black;
+        font-weight:900;
+        text-transform: none;
+        font-size:18px;
+        font-family: 'Port Lligat Sans', sans-serif;
+        margin:10px 0;
+    }
+    label{
+        
+         text-align: left;
+    }
+    footer p{
+        text-align:center;
+        width:100%;
+        padding:25px;
+        color:#474747;
+    }
+/*
+Browser Support
+Correect any issues with browsers
+
+*/
+/* 
+    Author     : nicolesawler
+*/
+  
+/* Chrome - Input Autofill Background/Text Color
+Change the white to any color ;) */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+    -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+/*Change text in autofill textbox*/
+input:-webkit-autofill {
+    -webkit-text-fill-color: black !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*AN HTML TUTORIAL DEMO FLOATING SHAPES*/
+
+#rotating-section{ 
+				position:relative;
+/*				background:#baffff  top center no-repeat fixed;*/
+				min-height:1000px;
+				overflow:hidden;
+background: linear-gradient(95deg, #a7faff, #ffe3ff, #d0ffd2, #f9fdc1);
+background-size: 800% 800%;
+
+-webkit-animation: AnimationName 45s ease infinite;
+-moz-animation: AnimationName 45s ease infinite;
+animation: AnimationName 45s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 33%}
+    50%{background-position:100% 68%}
+    100%{background-position:0% 33%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 33%}
+    50%{background-position:100% 68%}
+    100%{background-position:0% 33%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 33%}
+    50%{background-position:100% 68%}
+    100%{background-position:0% 33%}
+}
+
+
+.rect1,.rect2,.rect3,.rect4{
+		position:absolute;
+		width:100px;
+		height:100px;
+		bottom:-150px;
+		background:#fff;
+		-webkit-animation: mymove2 4s linear infinite;
+}
+
+.rect1{left:50%;}
+.rect2{left:10%;-webkit-animation-delay:0.3s;}
+.rect3{left:25%;-webkit-animation-delay:2s;}
+.rect4{left:85%;-webkit-animation-delay:1s;}
+
+
+.rect5,.rect6,.rect7,.rect8{
+		position:absolute;
+		width:50px;
+		height:50px;
+		background:#fff;
+		bottom:-150px;
+		-webkit-animation: mymove2 4s linear infinite;	
+}
+
+.rect5{left:0%;}
+.rect6{left:15%;-webkit-animation-delay:2.2s;}
+.rect7{left:45%;-webkit-animation-delay:0.8s;}
+.rect8{left:77%;-webkit-animation-delay:1.4s;}
+
+
+.rect9,.rect10{
+		position:absolute;
+		width:300px;
+		height:300px;
+		background:#fff;
+		bottom:-250px;
+		border-radius:50%;
+		-webkit-animation: mymove3 5s linear infinite;	
+}
+
+.rect9{left:3%;}
+.rect10{left:95%;-webkit-animation-delay:0s;}
+
+.rect13,.rect14{
+		position:absolute;
+		width:0px;
+		height:0px;
+		border:solid 40px transparent;
+		border-bottom:solid 40px #fff;
+		bottom:-150px;
+		-webkit-animation: mymove4 4s linear infinite;
+}
+
+
+.rect13{left:45%;border-bottom:solid 65px #fff;-webkit-animation-delay:0.6s;}
+.rect14{left:72%;border-bottom:solid 120px #fff;-webkit-animation:mymove5 6s liner infinte;-webkit-animation-delay:1s;}
+
+
+.rect11,.rect12{
+		position:absolute;
+		width:0px;
+		height:0px;
+		border:solid 40px transparent;
+		border-bottom:solid 40px #fff;
+		bottom:-150px;
+		-webkit-animation: mymove5 4s linear infinite;
+}
+
+.rect11{left:30%;}
+.rect12{left:65%;border-bottom:solid 60px #fff;-webkit-animation-delay:1.3s;}
+
+.rect15{
+		position:absolute;
+		width:300px;
+		height:300px;
+		background:#fff;
+		bottom:-400px;
+		-webkit-animation: mymove3 6s linear infinite;
+}
+
+.rect15{left:55%;}
+
+
+.rect17{
+		position:absolute;
+		width:150px;
+		height:150px;
+		background:#fff;
+		bottom:-400px;
+	}
+
+@-webkit-keyframes mymove2{
+	
+	0%{	transform:rortate(0deg);opacity:1;}
+	100%{transform:rotate(540deg);opacity:0;bottom:340px;}
+	}
+
+@-webkit-keyframes mymove3{
+	
+	0%{	transform:rortate(0deg);opacity:1;}
+	100%{transform:rotate(720deg);opacity:0;bottom:540px;}
+	}
+
+@-webkit-keyframes mymove4{	
+	0%{	transform:rortate(0deg);opacity:1;}
+	100%{transform:rotate(720deg);opacity:0;bottom:540px;}
+	}
+
+@-webkit-keyframes mymove5{	
+	0%{	opacity:1;}
+	100%{opacity:0;bottom:540px;}
+	}
